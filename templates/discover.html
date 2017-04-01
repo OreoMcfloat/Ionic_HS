@@ -1,0 +1,31 @@
+<ion-view view-title="">
+<ion-pane>
+  <ion-content class="pageView" ng-controller="newsController">
+	<div class="padding">
+	<h4 class="dark">News</h4>
+			<h6 class="mySubHeading">Fetched from www.cnn.com</h6>
+	</div>
+	
+
+
+		<div class="list card" ng-repeat="items in myJsonData">
+		<div class="item item-body">
+         <div class="item item-thumbnail-left" href="{{items.url}}">
+		<img ng-src="{{items.urlToImage}}">
+				<h2 class="dark">{{items.title}}</h2>
+		</div>
+
+		<h4 class="dark">{{items.description}} </h4>
+		<hr class="myHR">
+				<h4 class="dark">{{items.publishedAt}} BY {{items.author}}<br></h4>
+					<a href="{{items.url}}"><h5 class="dark"> Read more {{items.url}}</h5></a>
+
+
+  </div>
+
+</div>
+	
+  </ion-content>
+  </ion-pane>
+</ion-view>
+
