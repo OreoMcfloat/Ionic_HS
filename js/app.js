@@ -17,7 +17,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
       }
     }
+  }) 
+   .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html'
   })  
+     .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register.html'
+  })   
   .state('app.statistics', {
     url: '/statistics',
     views: {
@@ -83,5 +91,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   });
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/login');
 });

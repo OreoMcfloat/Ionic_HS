@@ -7710,6 +7710,65 @@ a.button {
   color: white;  /*Text color for each item, overrides the color property above*/
 }
 
+.pageView {
+  background-color: #e1e6eb !important; /* This sets the background color*/
+ }
+ 
+.pageView .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  border-top: 1px solid;   /*Top Border for each menu item*/
+  border-bottom:2px solid;   /*Bottom border for each menu item*/
+  border-color: #e1e6eb;   /*Sets colors for top and bottom border*/
+  color: white;    /*Text color for each item*/
+}
+ 
+/*Changes the border for the last item*/
+.pageView .item:last-child {
+  border-bottom: 1px solid #666;
+}
+ 
+.pageView .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+ 
+/*Just makes the type white*/
+
+.pageView p,
+.pageView a {
+  color: white;  /*Text color for each item, overrides the color property above*/
+}
+
+
+.loginView {
+  background-color: #141414 !important; /* This sets the background color*/
+ }
+ 
+.loginView .item {
+  background-color: transparent;
+  border:none;   /*Removes all borders*/
+  border-top: 1px solid;   /*Top Border for each menu item*/
+  border-bottom:2px solid;   /*Bottom border for each menu item*/
+  border-color: #e1e6eb;   /*Sets colors for top and bottom border*/
+  color: white;    /*Text color for each item*/
+}
+ 
+/*Changes the border for the last item*/
+.loginView .item:last-child {
+  border-bottom: 1px solid #666;
+}
+ 
+.loginView .item-complex .item-content, .dark .item-radio .item-content {
+  background-color: transparent;
+}
+ 
+/*Just makes the type white*/
+
+.loginView p,
+.loginView a {
+  color: white;  /*Text color for each item, overrides the color property above*/
+}
+
 	.pageViewInside {
   background-color: #ffffff !important; /* This sets the background color*/
  }
