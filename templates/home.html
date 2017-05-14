@@ -8,25 +8,33 @@
 	
 <div class="pageViewInside">
 
-    <div class="item item-icon-left" ng-repeat="x in record">
+  <li class="item item-toggle">
+  <h2 class="">Activate Device</h2>
+     <label class="toggle toggle-balanced">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+      <div class="item item-icon-left" ng-repeat="x in profile">
 
     <i class="icon ion-android-notifications">
 	</i>
-      <h3 class="myHeading">Client Name: {{x.Fname}} {{x.Lname}}</h3>
-
-    <h5 class="mySubHeading">Event ID: {{x.id}}</h5>
-	<h5 class="mySubHeading">Alarm Date: {{x.alarmDate}}</h5>
-	<h5 class="mySubHeading">Alarm Duration: {{x.alarmDuration}}</h5>
+      <h3 class="myHeading">Client Name: {{x.Fname}}</h3>
+	</div>
+	<div class="item item-icon-left" ng-repeat="item in myJsonData">
+    <h5 class="mySubHeading">Fullname: {{item.fullname}}</h5>
+	<h5 class="mySubHeading">User ID: {{item.acc_id}}</h5>
+	<h5 class="mySubHeading">Address: {{item.address}}</h5>
+	<h5 class="mySubHeading">Contact: {{item.contact}}</h5>
+	<h5 class="mySubHeading">Username: {{item.username}}</h5>
 		<div class="item-note">
-      <h6 class="assertive">{{x.alarmLevel}}</h6>
+      <h6 class="assertive"></h6>
     </div>
-	<h5 class="mySubHeading">Level: </h5>
 	<hr class="myHR">
-
-    <h5 class="mySubHeading">No more results.</h5>
-
-
 </div>
+    <h5 class="mySubHeading">No more results.</h5>
 
 
   </div>

@@ -1,7 +1,6 @@
-<?php 
-
-include('db_con.php');
-
+<?php
+	require_once("db_con.php");
+	
 if (isset($_SERVER['HTTP_ORIGIN'])) {
         header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
         header('Access-Control-Allow-Credentials: true');
@@ -19,14 +18,14 @@ if (isset($_SERVER['HTTP_ORIGIN'])) {
 
         exit(0);
     }
+	
+		$sql = "SELECT * FROM accounts";
+		$result = mysqli_query($conn, $sql);
+		$info=array();
+		
+		while($data = mysqli_fetch_assoc($result)){
+			array_push($info, $data);
+		}
+		echo json_encode($info);
 
-$postdata = file_get_contents("php://input");
-$request = json_decode($postdata);
-$username = $request->username;
-$password = $request->password;
-$fullname = $request->fullname;
-$address = $request->address;
-$contact = $request->contact;
-
-mysqli_query($conn,"INSERT INTO accounts(username,password,fullname,address,contact) VALUES ('$username','$password','$fullname','$address','$contact')");
- ?>
+?>

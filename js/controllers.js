@@ -10,18 +10,16 @@ var app = angular.module('starter.controllers', [])
 
 })
 
-.controller('HistoryCtrl', function($scope) {
+.controller('HistoryCtrl', function($scope, $http){
 
-    var data = localStorage.getItem("name");
-
-    $scope.record = [{
-    id: 10010,
-    Fname: data,
-	alarmDate: 'March 31, 2017',
-	alarmDuration: '20 seconds',
-	alarmLevel: 'HIGH'
-  }];
-
+    $http.get('https://homeshield.000webhostapp.com/HomeShield/php/pull1.php')
+        .success(function (info) {
+            // The json data will now be in scope.
+	$scope.myJsonData = info;
+	console.log(info);
+	
+        });
+		
 })
 
 
@@ -40,7 +38,7 @@ var app = angular.module('starter.controllers', [])
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://localhost/ionicHS_LOGIN/php/login.php',
+        url: 'https://homeshield.000webhostapp.com/HomeShield/php/login.php',
         method: "POST",
         data: {
             'username' : username,
@@ -71,15 +69,19 @@ var app = angular.module('starter.controllers', [])
     var username = $scope.username;
     var password = $scope.password;
     var fullname = $scope.fullname;
+    var address = $scope.address;
+    var contact = $scope.contact;
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://localhost/ionicHS_LOGIN/php/register.php',
+        url: 'https://homeshield.000webhostapp.com/HomeShield/php/register.php',
         method: "POST",
         data: {
             'username' : username,
             'password' : password,
-            'fullname' : fullname
+            'fullname' : fullname,
+            'address' : address,
+            'contact' : contact
         }
     })
     .then(function(response){
@@ -87,6 +89,8 @@ var app = angular.module('starter.controllers', [])
         var data = response.data[0];
             $scope.username = '';
             $scope.password = '';
+            $scope.address = '';
+            $scope.contact = '';
             $state.go('app.home');
             localStorage.setItem("name",fullname);
      
@@ -95,7 +99,7 @@ var app = angular.module('starter.controllers', [])
         console.log('Error');
     });
    }
-})
+});
 
 
 

@@ -30,15 +30,17 @@ CREATE TABLE `accounts` (
   `acc_id` int(10) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `fullname` varchar(255) NOT NULL
+  `fullname` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `contact` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`acc_id`, `username`, `password`, `fullname`) VALUES
-(201410505, 'oreomcfloat', '12345', 'John Philip Canlas');
+INSERT INTO `accounts` (`acc_id`, `username`, `password`, `fullname`, `address`, `contact`) VALUES
+(201410505, 'oreomcfloat', '12345', 'John Philip Canlas', '3 Leyva St. Mabayuan Olongapo City', '09320158119');
 
 --
 -- Indexes for dumped tables
