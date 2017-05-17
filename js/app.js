@@ -14,6 +14,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/home.html',
+		controller: 'HistoryCtrl'
+      }
+    }
+  }) 
+   .state('app.report', {
+    url: '/report',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/report.html'
 
       }
     }
@@ -56,6 +65,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     views: {
       'menuContent': {
         templateUrl: 'templates/comment.html'
+		
       }
     }
   })

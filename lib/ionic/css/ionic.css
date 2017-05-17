@@ -7805,6 +7805,7 @@ color: #8c96a0;
 }
 
 /*Menu Icons*/
+.ion-star{font-size:20px !important;}
 .ion-chatbubble-working{font-size:20px !important;}
 .ion-card{font-size:20px !important;}
 .ion-email-unread{font-size:20px !important;}
