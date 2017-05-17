@@ -38,7 +38,7 @@ $scope.a = {};
 $scope.a.airplaneMode = false;
 $scope.off = function() {
 if($scope.a.airplaneMode == true){
-	$http.get('http://localhost/ionicHS/HomeShield/off.php')
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/HomeShield/off.php')
 }
 }
 	$ionicLoading.hide();
@@ -49,7 +49,7 @@ if($scope.a.airplaneMode == true){
   
   
   	$ionicLoading.show();
-	$http.get('http://localhost/ionicHS/php/account_pull.php').success( function(info){
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/php/account_pull.php').success( function(info){
 	$scope.accountInfo = info;
 	$ionicLoading.hide();
 	console.log(info);
@@ -91,15 +91,15 @@ $scope.a = {};
 $scope.a.airplaneMode = false;
 $scope.change = function() {
 if($scope.a.airplaneMode == true){
-	$http.get('http://localhost/ionicHS/HomeShield/ons.php')
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/HomeShield/ons.php')
 }else if($scope.a.airplaneMode == false){
-	$http.get('http://localhost/ionicHS/HomeShield/off.php')
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/HomeShield/off.php')
 }
 }
 	
 	$ionicLoading.show();	
 	setInterval(function(){
-	$http.get('http://localhost/ionicHS/php/single_notification.php').success( function(info){
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/php/single_notification.php').success( function(info){
 
 	$scope.reportIncident = info;
 	$ionicLoading.hide();
@@ -142,7 +142,7 @@ else if(i=="LOW"){
 	
 	$ionicLoading.show();	
 	setInterval(function(){
-	$http.get('http://localhost/ionicHS/php/report_insert.php').success( function(info){
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/php/report_insert.php').success( function(info){
 
 	$scope.historyReport = info;
 	$ionicLoading.hide();
@@ -171,7 +171,7 @@ else if(i=="LOW"){
 .controller('statisticsCtrl', function($scope, $http, $stateParams, $ionicPopup, $ionicLoading){
 
 	$ionicLoading.show();
-	$http.get('http://localhost/ionicHS/php/statistics_pull.php').success( function(info){
+	$http.get('https://homeshield.000webhostapp.com/ionicHS/php/statistics_pull.php').success( function(info){
 	$scope.statisticsInfo = info;
 	$ionicLoading.hide();
 	console.log(info);
@@ -222,7 +222,7 @@ $ionicLoading.show();
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://localhost/ionicHS/php/login.php',
+        url: 'https://homeshield.000webhostapp.com/ionicHS/php/login.php',
         method: "POST",
         data: {
             'username' : username,
@@ -263,7 +263,7 @@ $ionicLoading.show();
     
     $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     $http({
-        url: 'http://localhost/ionicHS/php/register.php',
+        url: 'https://homeshield.000webhostapp.com/ionicHS/php/register.php',
         method: "POST",
         data: {
             'username' : username,

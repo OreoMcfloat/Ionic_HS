@@ -1,15 +1,19 @@
-<?php 
-	//connection
-	header('Access-Control-Allow-Origin: *'); // macontrol kung sno pwede makapagaccess ng data na andto. asterisk, lahat pwede makaaccess
-	header('application/json');
+<?php
+
+$servername = "localhost";
+$username = "id1666614_homeshield";
+$password = "Aa1234567";
+
+
+$conn = mysqli_connect('localhost','id1666614_homeshield','Aa1234567','id1666614_homeshield');
+
+if (!$conn) {
+	    die("connection failed:".mysqli_connect_error());
+	    
+	} 
+		
 	
-	$SERVER = "localhost";
-	$USERNAME = "root";
-	$PASSWORD = "";
-	$DBASE = "homeshield";
-	
-	//define("SERVER", "localhost"); mas secure
-	
-    $conn = mysqli_connect($SERVER,$USERNAME,$PASSWORD,$DBASE);
+
+
 
 ?>
